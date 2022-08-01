@@ -4,4 +4,4 @@ A small windows keylogger with **NO DEPENDENCIES** made in C/Winapi, logs are se
 ## Compile
 > Charset **MUST** be set to multi-byte
 
-Edit "Config.h" with TG_BOT_TOKEN, TG_CHAT_ID AND SEND_DELAY before compiling with Visual Studio.
+Edit "Config.h" with TG_BOT_TOKEN, TG_CHAT_ID AND SEND_DELAY before compiling with Visual Studio (Release - x86).
